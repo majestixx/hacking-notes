@@ -79,7 +79,7 @@ List sudo rights
 `sudo -l`
 
 setuid-Bit
-`find . -perm /4000`
+`find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null`
 
 # Post Exploitation
 
@@ -100,6 +100,13 @@ View & edit Path variable
 `export PATH=/some/new/path:$PATH`  
 
 [Cyberchef](https://gchq.github.io/CyberChef/) - Encoding, Cryto and other string operations
+
+## Images
+
+exiftool - show exifdata
+
+Extract hidden data from images
+`steghide extract -sf Image.jpg`
 
 # Legende
 
